@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Underoot — Rosemary Scalp Oil | Fuller-looking hair starts at the scalp</title>
+<meta name="description" content="A lightweight rosemary scalp oil that feeds the layer every other oil ignores — for the look of fuller, healthier hair. Two minutes a day." />
+
+<!--  ════════════════════════════════════════════════════════════
+      FILL BEFORE PUBLISHING
+      • [STRIPE_LINK]  → your Stripe Payment Link (every Buy button)
+      • [PRICE]        → your price, e.g. £24
+      • [WEEKS]        → how long one bottle lasts, e.g. 6–8
+      • images         → replace the .ph placeholders (see image-prompts.md)
+      • reviews        → replace the 3 placeholder cards with REAL reviews
+      • "Organic"      → only keep in the name if the formula is certified organic
+      • TikTok pixel   → paste in the slot marked below
+      ════════════════════════════════════════════════════════════ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<!-- TIKTOK PIXEL SLOT — paste your pixel script here -->
+
+<style>
+  :root{
+    --soil:#13201A; --soil-2:#1A2A21; --rosemary:#3E5C46;
+    --sage:#A9B89A; --sage-2:#C7D2BC; --oil:#CFA34C; --oil-deep:#A87B2C;
+    --paper:#F4F1E8; --paper-2:#EAE5D6; --ink:#19231C; --muted:#5E6B5E;
+    --line: rgba(169,184,154,.35);
+    --maxw: 1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:500;line-height:1.08;letter-spacing:-.01em}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .eyebrow{font-family:"Inter";font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--oil-deep)}
+  .eyebrow.on-dark{color:var(--oil)}
+
+  /* image placeholders */
+  .ph{background:linear-gradient(135deg,var(--paper-2),#dfd8c4);border:1px dashed rgba(25,35,28,.25);border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.78rem;letter-spacing:.04em;text-align:center;padding:1rem;min-height:240px}
+  .ph.dark{background:linear-gradient(135deg,#22332a,#1a281f);border-color:rgba(169,184,154,.3);color:var(--sage)}
+
+  /* buttons */
+  .btn{display:inline-block;background:var(--oil);color:#1a1405;font-weight:600;font-size:1rem;padding:1rem 1.9rem;border-radius:999px;text-decoration:none;letter-spacing:.01em;transition:transform .15s ease, background .2s ease;border:none;cursor:pointer}
+  .btn:hover{background:#dcb05c;transform:translateY(-2px)}
+  .btn:focus-visible{outline:3px solid var(--rosemary);outline-offset:3px}
+  .btn-sm{padding:.6rem 1.15rem;font-size:.85rem}
+
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(244,241,232,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:padding .2s ease}
+  .hdr{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .mark{font-family:"Fraunces";font-weight:600;font-size:1.28rem;letter-spacing:.02em}
+  .mark span{color:var(--oil-deep)}
+
+  /* SURFACE LINE — the signature */
+  .surface{position:relative;text-align:center;padding:0;margin:0}
+  .surface-line{height:1px;background:var(--line);position:relative}
+  .surface-tag{position:relative;display:inline-block;background:var(--paper);padding:0 14px;transform:translateY(-50%);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+
+  /* HERO */
+  .hero{background:radial-gradient(120% 90% at 50% -10%, #20342a 0%, var(--soil) 55%, #0f1813 100%);color:var(--paper);position:relative;overflow:hidden}
+  .hero .wrap{padding-top:54px;padding-bottom:0}
+  .hero h1{font-size:clamp(2.3rem,8vw,4.1rem);color:var(--paper);max-width:14ch;margin:.5rem auto 0;text-align:center}
+  .hero h1 em{font-style:italic;color:var(--sage)}
+  .hero .sub{max-width:30rem;margin:1.2rem auto 0;text-align:center;color:var(--sage-2);font-size:1.05rem}
+  .hero .cta-row{text-align:center;margin-top:1.7rem}
+  .hero .trust{text-align:center;color:var(--sage);font-size:.8rem;margin-top:1rem;letter-spacing:.02em}
+  .hero .eyebrow{display:block;text-align:center}
+
+  /* the above/below dramatisation */
+  .threshold{margin-top:2.6rem;position:relative}
+  .threshold .label{display:flex;justify-content:space-between;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase}
+  .threshold .above{color:var(--sage-2)}
+  .threshold .below{color:var(--oil)}
+  .threshold .rule{height:1px;background:linear-gradient(90deg,transparent,var(--oil),transparent);margin:.5rem 0 0}
+  .threshold .roots{height:46px;background:
+     radial-gradient(2px 2px at 20% 0,var(--oil) 40%,transparent 41%),
+     radial-gradient(2px 2px at 50% 0,var(--oil) 40%,transparent 41%),
+     radial-gradient(2px 2px at 80% 0,var(--oil) 40%,transparent 41%);
+     opacity:.5}
+  .hero-prod{max-width:300px;margin:1.4rem auto -2px;position:relative;z-index:2}
+  .hero-prod .ph{min-height:260px}
+
+  /* generic section */
+  section{padding:74px 0}
+  .center{text-align:center}
+  .lead{font-size:1.06rem;color:var(--muted);max-width:34rem}
+  .center .lead{margin-left:auto;margin-right:auto}
+  h2{font-size:clamp(1.8rem,5.5vw,2.7rem);max-width:18ch}
+  .center h2{margin-left:auto;margin-right:auto}
+  h2 em{font-style:italic;color:var(--rosemary)}
+
+  /* dark argument sections */
+  .dark{background:var(--soil);color:var(--paper)}
+  .dark h2{color:var(--paper)}
+  .dark h2 em{color:var(--sage)}
+  .dark .lead{color:var(--sage-2)}
+
+  /* problem */
+  .stack > * + *{margin-top:1.1rem}
+
+  /* ingredients grid */
+  .ing{display:grid;grid-template-columns:1fr;gap:14px;margin-top:2.2rem}
+  .ing .item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.2rem}
+  .ing .item b{font-family:"Fraunces";font-weight:600;font-size:1.05rem}
+  .ing .item p{font-size:.92rem;color:var(--muted);margin-top:.25rem}
+  .ing-foot{margin-top:1.3rem;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--oil-deep)}
+
+  /* steps */
+  .steps{counter-reset:s;margin-top:2rem;display:grid;gap:18px}
+  .steps li{list-style:none;display:flex;gap:16px;align-items:flex-start}
+  .steps li::before{counter-increment:s;content:counter(s);flex:0 0 42px;height:42px;border-radius:50%;background:var(--soil);color:var(--oil);font-family:"Fraunces";font-size:1.2rem;display:flex;align-items:center;justify-content:center}
+  .steps li b{font-weight:600}
+
+  /* compare table */
+  .cmp{margin-top:2rem;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
+  .cmp .row{display:grid;grid-template-columns:1.1fr 1fr 1fr;font-size:.9rem}
+  .cmp .row > div{padding:.85rem .9rem;border-bottom:1px solid var(--line)}
+  .cmp .row:last-child > div{border-bottom:none}
+  .cmp .head div{font-weight:600;background:var(--paper-2);font-size:.78rem;letter-spacing:.04em;text-transform:uppercase}
+  .cmp .row .us{background:#f6f3ea;font-weight:500}
+  .cmp .lbl{color:var(--muted)}
+
+  /* reviews */
+  .revs{display:grid;gap:16px;margin-top:2rem}
+  .rev{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.2rem}
+  .stars{color:var(--oil);letter-spacing:.12em;font-size:.95rem}
+  .rev p{margin-top:.5rem;font-size:.96rem}
+  .rev .who{margin-top:.7rem;font-size:.82rem;color:var(--muted)}
+
+  /* offer */
+  .offer{background:var(--soil-2);color:var(--paper);text-align:center}
+  .offer h2{color:var(--paper)}
+  .price{font-family:"Fraunces";font-size:3rem;margin:.6rem 0 .2rem}
+  .offer ul{list-style:none;margin:1.3rem auto 1.6rem;max-width:22rem;text-align:left}
+  .offer ul li{padding:.35rem 0 .35rem 1.7rem;position:relative;color:var(--sage-2)}
+  .offer ul li::before{content:"✓";position:absolute;left:0;color:var(--oil);font-weight:700}
+  .small-batch{font-size:.78rem;color:var(--sage);margin-top:1rem;font-style:italic}
+
+  /* faq */
+  .faq{max-width:46rem;margin:2rem auto 0}
+  .q{border-bottom:1px solid var(--line)}
+  .q button{width:100%;text-align:left;background:none;border:none;padding:1.15rem 2rem 1.15rem 0;font-family:"Fraunces";font-size:1.08rem;color:var(--ink);cursor:pointer;position:relative}
+  .q button::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-family:"Inter";color:var(--oil-deep);font-size:1.3rem;transition:transform .2s}
+  .q[open] button::after{content:"–"}
+  .q .a{padding:0 0 1.15rem;color:var(--muted);font-size:.96rem;max-width:42rem}
+
+  /* final + footer */
+  .final{background:var(--soil);color:var(--paper);text-align:center}
+  .final h2{color:var(--paper);margin-bottom:.7rem}
+  .final p{color:var(--sage-2);max-width:26rem;margin:0 auto 1.6rem}
+  footer{background:#0f1813;color:var(--sage);padding:34px 0;font-size:.82rem}
+  .foot{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;justify-content:space-between}
+  .foot a{color:var(--sage-2);text-decoration:none}
+  .foot a:hover{color:var(--oil)}
+  .disc{color:#6f7d6c;font-size:.72rem;margin-top:14px;max-width:46rem}
+
+  /* reveal */
+  .rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+  /* larger screens */
+  @media(min-width:760px){
+    .ing{grid-template-columns:1fr 1fr}
+    .hero-prod{max-width:340px}
+    .hero h1{font-size:clamp(3rem,6vw,4.4rem)}
+    .threshold .roots{height:60px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hdr">
+    <div class="mark">Under<span>oot</span></div>
+    <a class="btn btn-sm" href="[STRIPE_LINK]">Shop</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow on-dark">Scalp-first hair care</span>
+    <h1>Your hair was never the problem. Your <em>scalp</em> was.</h1>
+    <p class="sub">A lightweight rosemary scalp oil that feeds the one layer almost every other oil ignores — for the look of fuller, denser, healthier hair. Two minutes a day.</p>
+    <div class="cta-row"><a class="btn" href="[STRIPE_LINK]">Start your scalp reset →</a></div>
+    <p class="trust">★★★★★ &nbsp;Loved by [X,XXX] customers &nbsp;·&nbsp; Free tracked UK shipping &nbsp;·&nbsp; 30-day promise</p>
+
+    <div class="threshold">
+      <div class="label"><span class="above">The strand · what you see</span><span class="below">The scalp · where it starts</span></div>
+      <div class="rule"></div>
+      <div class="roots"></div>
+    </div>
+    <div class="hero-prod"><div class="ph dark">HERO PRODUCT IMAGE<br>(use real Selfnamed bottle)</div></div>
+  </div>
+</section>
+
+<!-- social proof bar -->
+<div class="surface"><div class="surface-line"><span class="surface-tag">[X,XXX] bottles sold · ★ 4.8 average · individual results may vary</span></div></div>
+
+<!-- PROBLEM -->
+<section>
+  <div class="wrap rv">
+    <span class="eyebrow">Why nothing worked</span>
+    <h2>You've tried the oils. Nothing changed.</h2>
+    <div class="stack" style="margin-top:1.3rem">
+      <p class="lead">You massaged in the castor oil. You tried the rosemary water all over your feed. You waited. And your hair looked exactly the same — maybe greasier.</p>
+      <p class="lead">It isn't that oils don't work. It's that almost every oil you've used treats the <b>strand</b> — the part that's already finished growing. None of them touch the <b>scalp</b> underneath, where the look of healthy hair actually begins.</p>
+      <p class="lead" style="color:var(--ink)"><b>Treat the wrong layer, get the same result. Every time.</b></p>
+    </div>
+  </div>
+</section>
+
+<!-- MECHANISM (dark argument) -->
+<section class="dark">
+  <div class="wrap center rv">
+    <span class="eyebrow on-dark">The shift</span>
+    <h2>Healthy-looking hair is grown at the <em>scalp</em>, not the strand.</h2>
+    <p class="lead" style="margin-top:1.2rem">The hair you can see is already there. Finished. The only place anything changes is the scalp — the environment your hair grows out of.</p>
+    <p class="lead" style="margin-top:1rem">A scalp that's dry, tight and neglected makes hair look thin and flat. A scalp that's nourished and balanced is the foundation of hair that looks fuller and denser.</p>
+    <p class="lead" style="margin-top:1rem;color:var(--paper)">That's Underoot. Not another strand oil — a <b>scalp-first treatment</b>, built to feed the one layer every other oil skips.</p>
+  </div>
+</section>
+
+<!-- PRODUCT + INGREDIENTS -->
+<section>
+  <div class="wrap rv">
+    <span class="eyebrow">The 2-minute scalp reset</span>
+    <h2>Six oils. One scalp-first complex.</h2>
+    <p class="lead" style="margin-top:1.1rem">A lightweight, fast-absorbing blend led by rosemary — one of the most-studied botanicals for the scalp. It sinks in like a serum, never greasy. No drugs. No synthetic actives. No 12-step routine.</p>
+    <div class="ing">
+      <div class="item"><b>Rosemary oil</b><p>The hero. Long studied for the scalp; supports the look of fuller, healthier hair.</p></div>
+      <div class="item"><b>Castor oil</b><p>Traditionally used to support thicker-looking, conditioned strands.</p></div>
+      <div class="item"><b>Pumpkin seed extract</b><p>Nutrient-dense, for nourished-looking hair.</p></div>
+      <div class="item"><b>Peppermint oil</b><p>A clean, tingling feel that tells you it's working.</p></div>
+      <div class="item"><b>Aloe &amp; lavender</b><p>Soothe and balance a stressed scalp.</p></div>
+      <div class="item"><b>Vitamin E</b><p>Antioxidant support that helps reduce the look of breakage.</p></div>
+    </div>
+    <p class="ing-foot">Vegan · cruelty-free · all hair types</p>
+  </div>
+</section>
+
+<!-- HOW TO USE -->
+<section class="dark">
+  <div class="wrap rv">
+    <span class="eyebrow on-dark">The ritual</span>
+    <h2>Three steps. Every day.</h2>
+    <ul class="steps">
+      <li><div><b>Part dry or damp hair</b> to expose the scalp.</div></li>
+      <li><div><b>Apply a few drops</b> directly to the scalp and massage for two minutes.</div></li>
+      <li><div><b>Leave in, or rinse after an hour.</b> Use daily — this is a habit, not a hack.</div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- RESULTS placeholder -->
+<section>
+  <div class="wrap center rv">
+    <span class="eyebrow">Real people, real routines</span>
+    <div class="ph" style="margin-top:1.4rem">RESULTS — real customer photos only.<br>No fabricated before/afters. Use the ritual imagery until you have genuine ones.</div>
+    <p class="lead" style="margin-top:1rem;font-size:.85rem">Individual results may vary. Underoot is a cosmetic scalp oil that supports the look of healthier hair. It is not a treatment for hair loss.</p>
+  </div>
+</section>
+
+<!-- REVIEWS placeholder -->
+<section style="padding-top:0">
+  <div class="wrap rv">
+    <div class="revs">
+      <!-- REPLACE WITH REAL REVIEWS -->
+      <div class="rev"><div class="stars">★★★★★</div><p>“[Real review — e.g. my hair looks so much fuller and my scalp feels healthier.]”</p><div class="who">— [Name], verified buyer</div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>“[Real review — keep it honest, no regrowth claims.]”</p><div class="who">— [Name], verified buyer</div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>“[Real review — e.g. less breakage in my brush.]”</p><div class="who">— [Name], verified buyer</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section>
+  <div class="wrap rv">
+    <span class="eyebrow">The difference</span>
+    <h2>Why Underoot, not the £4 oil?</h2>
+    <div class="cmp">
+      <div class="row head"><div></div><div>Generic oil</div><div>Underoot</div></div>
+      <div class="row"><div class="lbl">Treats</div><div>The strand</div><div class="us">The scalp</div></div>
+      <div class="row"><div class="lbl">Feel</div><div>Heavy, greasy</div><div class="us">Light, absorbs fast</div></div>
+      <div class="row"><div class="lbl">Blend</div><div>One or two oils</div><div class="us">Six-oil complex, rosemary-led</div></div>
+      <div class="row"><div class="lbl">Approach</div><div>A product</div><div class="us">A scalp-first method</div></div>
+    </div>
+    <p class="lead" style="margin-top:1.3rem">Cheap oils sell you a bottle. We built a method around the only layer that matters.</p>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="offer">
+  <div class="wrap rv">
+    <span class="eyebrow on-dark">Start today</span>
+    <h2>Start your scalp reset.</h2>
+    <div class="price">[PRICE]</div>
+    <p style="color:var(--sage-2)">One bottle · around [WEEKS] weeks of daily use</p>
+    <ul>
+      <li>Free tracked UK shipping</li>
+      <li>Secure checkout</li>
+      <li>30-day promise — give it an honest go; if you're not happy, message us</li>
+    </ul>
+    <a class="btn" href="[STRIPE_LINK]">Buy now →</a>
+    <p class="small-batch">Made in small batches — when it's out, it's out. (remove if untrue)</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap rv">
+    <span class="eyebrow center" style="display:block;text-align:center">Questions</span>
+    <h2 class="center">Before you ask</h2>
+    <div class="faq">
+      <details class="q"><summary><button type="button">Will this regrow my hair?</button></summary><div class="a">No — and any oil that promises that is lying to you. Underoot is a cosmetic scalp oil, not a medicine. It supports a healthier-looking scalp and the look of fuller, denser hair; it does not treat hair loss or baldness. Results vary from person to person.</div></details>
+      <details class="q"><summary><button type="button">How long until I notice anything?</button></summary><div class="a">Hair changes slowly. Give it consistent daily use over several weeks. There's no overnight version — anyone who tells you otherwise is selling a fantasy.</div></details>
+      <details class="q"><summary><button type="button">Is it greasy?</button></summary><div class="a">No. It's lightweight and absorbs like a serum, so you can use it and get on with your day.</div></details>
+      <details class="q"><summary><button type="button">What's actually in it?</button></summary><div class="a">Six plant oils led by rosemary — the full list is above. Vegan, cruelty-free, no synthetic actives.</div></details>
+      <details class="q"><summary><button type="button">Who is it for?</button></summary><div class="a">Anyone who wants fuller, healthier-looking hair and has been let down by oils that sit on top and do nothing. All hair types.</div></details>
+      <details class="q"><summary><button type="button">Shipping &amp; returns?</button></summary><div class="a">[Free tracked UK shipping, ~X days. 30-day promise — fill in your policy.]</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final">
+  <div class="wrap rv">
+    <h2>Stop treating the strand.<br>Start with the scalp.</h2>
+    <p>Two minutes a day, on the one layer every other oil ignores.</p>
+    <a class="btn" href="[STRIPE_LINK]">Start your scalp reset →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="mark" style="color:var(--paper)">Under<span style="color:var(--oil)">oot</span></div>
+      <div style="display:flex;gap:18px;flex-wrap:wrap">
+        <a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/refunds">Refunds</a><a href="/shipping">Shipping</a><a href="/contact">Contact</a>
+      </div>
+    </div>
+    <p class="disc">Underoot products are cosmetics. They are not intended to diagnose, treat, cure, or prevent any condition.</p>
+  </div>
+</footer>
+
+<script>
+  // reveal on scroll
+  const rv=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion:reduce)').matches){
+    const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+    rv.forEach(el=>io.observe(el));
+  } else { rv.forEach(el=>el.classList.add('in')); }
+
+  // single-open FAQ
+  const ds=document.querySelectorAll('.faq details');
+  ds.forEach(d=>d.addEventListener('toggle',()=>{ if(d.open) ds.forEach(o=>{if(o!==d)o.open=false}); }));
+</script>
+</body>
+</html>
