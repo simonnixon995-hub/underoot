@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap');
+:root{
+  /* Brand — matched to the logo (warm cream, serif, antique gold, forest green) */
+  --primary:#0A473B; --secondary:#357A4E; --accent:#A87C3A;
+  --gold:#A87C3A; --gold-deep:#8A6526;
+  --bg:#F4F1E8; --text:#241E16; --radius:8px;
+  --serif:"Fraunces", Georgia, "Times New Roman", serif;
+  --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Existing names, remapped */
+  --soil:#0A473B; --rosemary:#2C5C3E; --sage:#C4D2B8; --oil:#A87C3A; --oil-deep:#8A6526;
+  --paper:#F4F1E8; --paper-2:#EAE5D6; --card:#FFFFFF; --ink:#241E16; --muted:#5F5848;
+  --line:rgba(42,33,18,.16);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--oil-deep)}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px}
+
+header{position:sticky;top:0;z-index:20;background:rgba(244,241,232,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hdr{display:flex;align-items:center;justify-content:space-between;height:60px}
+.mark{flex:none;display:inline-block;width:44px;height:50px;background:url('images/logo.png') center/contain no-repeat;overflow:hidden;text-indent:-999em;white-space:nowrap;font-size:1px}
+.mark span{display:none}
+footer .mark{filter:brightness(0) invert(1)}
+.back{font-size:.85rem;text-decoration:none;color:var(--muted)}
+.back:hover{color:var(--oil-deep)}
+
+main{padding:56px 0 40px}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(2rem,6vw,2.8rem);line-height:1.1;letter-spacing:-.005em}
+.updated{color:var(--muted);font-size:.85rem;margin-top:.6rem}
+h2{font-family:var(--serif);font-weight:600;font-size:1.45rem;margin:2.2rem 0 .6rem}
+p,li{font-size:1rem;margin-bottom:.8rem}
+ul{padding-left:1.2rem}
+li{margin-bottom:.45rem}
+.note{background:#FBF7EC;border:1px solid var(--line);border-left:3px solid var(--oil);border-radius:var(--radius);padding:1rem 1.1rem;font-size:.92rem;color:var(--muted);margin:1.4rem 0}
+strong{color:var(--ink)}
+
+footer{background:#0A2A20;color:var(--sage);padding:30px 0;font-size:.82rem;margin-top:40px}
+.foot{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;justify-content:space-between}
+.foot a{color:var(--sage);text-decoration:none}
+.foot a:hover{color:var(--oil)}
+.disc{color:#7E8A77;font-size:.72rem;margin-top:14px;max-width:46rem}
