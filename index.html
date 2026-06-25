@@ -73,7 +73,7 @@
   .surface-tag{position:relative;display:inline-block;background:var(--paper);padding:0 14px;transform:translateY(-50%);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
 
   /* HERO (light / elevated) */
-  .hero{background:linear-gradient(180deg,#FBF9F2 0%, #ECE4D2 100%);color:var(--ink);position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero{background:var(--paper);color:var(--ink);position:relative;padding:0 22px;border-bottom:1px solid var(--line)}
   .hero .wrap{padding-top:50px;padding-bottom:0}
   .hero .eyebrow{display:block;text-align:center;color:var(--oil-deep)}
   .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.2rem,7vw,4rem);color:var(--ink);max-width:15ch;margin:.5rem auto 0;text-align:center;line-height:1.06}
@@ -82,6 +82,8 @@
   .hero .cta-row{text-align:center;margin-top:1.7rem}
   .hero .trust{text-align:center;color:var(--muted);font-size:.82rem;margin-top:1rem;letter-spacing:.02em}
   .hero-prod{max-width:330px;margin:1.8rem auto -2px;position:relative;z-index:2}
+  .hero-banner{width:100%;max-width:780px;margin:0 auto;display:block;border-radius:12px}
+  .hero-cta{text-align:center;padding:.85rem 22px 1.1rem}
 
   /* generic section */
   section{padding:74px 0}
@@ -149,6 +151,15 @@
   .offer ul{list-style:none;margin:1.3rem auto 1.6rem;max-width:22rem;text-align:left}
   .offer ul li{padding:.35rem 0 .35rem 1.7rem;position:relative;color:var(--sage-2)}
   .offer ul li::before{content:"✓";position:absolute;left:0;color:var(--secondary);font-weight:700}
+  .offer-grid{display:grid;grid-template-columns:1fr auto;gap:clamp(28px,5vw,64px);align-items:center;text-align:left}
+  .offer-photo{height:clamp(560px,60vw,800px)}
+  .offer-photo img{height:100%;width:auto;border-radius:14px;display:block}
+  .offer-grid .offer-body ul{margin-left:0;margin-right:0}
+  @media(max-width:760px){
+    .offer-grid{grid-template-columns:1fr;justify-items:center;text-align:center}
+    .offer-grid .offer-body ul{margin-left:auto;margin-right:auto}
+    .offer-photo{height:520px;order:-1}
+  }
 
   /* faq */
   .faq{max-width:46rem;margin:2rem auto 0}
@@ -166,6 +177,8 @@
   .foot{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;justify-content:space-between}
   .foot a{color:var(--sage-2);text-decoration:none}
   .foot a:hover{color:var(--oil)}
+  .brand-foot{display:inline-block}
+  .brand-foot img{height:64px;width:auto;display:block;filter:brightness(0) invert(1)}
   .disc{color:#6E8079;font-size:.72rem;margin-top:14px;max-width:46rem}
 
   /* reveal */
@@ -182,18 +195,35 @@
   }
 
   /* header brand + shop icons */
-  .brand img{height:74px;width:auto;display:block}
-  .hdr{height:98px}
-  @media(max-width:600px){.brand img{height:60px}.hdr{height:82px}}
+  .brand img{height:62px;width:auto;display:block}
+  .hdr{height:76px;gap:18px}
+  .main-nav{display:flex;gap:24px;align-items:center;font-family:var(--sans);font-size:.92rem;white-space:nowrap}
+  .main-nav a{color:var(--ink);text-decoration:none;letter-spacing:.01em}
+  .main-nav a:hover{color:var(--oil-deep)}
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--ink);padding:4px;line-height:0}
+  @media(max-width:880px){
+    .nav-toggle{display:block}
+    .main-nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 12px 26px rgba(20,16,10,.14);padding:4px 22px 12px}
+    .main-nav.open{display:flex}
+    .main-nav a{padding:14px 2px;border-top:1px solid var(--line);font-size:1.02rem}
+    .main-nav a:first-child{border-top:none}
+  }
+  @media(max-width:600px){.brand img{height:50px}.hdr{height:64px}}
 
-  /* scrolling trust marquee */
-  .marquee{background:var(--soil);overflow:hidden;white-space:nowrap;padding:.85rem 0}
-  .marquee-track{display:inline-block;white-space:nowrap;animation:marquee 28s linear infinite;will-change:transform}
-  .marquee-track span{font-family:var(--serif);font-weight:600;font-size:1.05rem;color:#F4F1E8;margin:0 1.4rem}
-  .marquee-track span::before{content:"✦";color:var(--oil);margin-right:1.4rem}
+  /* scrolling trust marquee (compact) */
+  .marquee{background:var(--soil);overflow:hidden;white-space:nowrap;padding:.4rem 0}
+  .marquee-track{display:inline-block;white-space:nowrap;animation:marquee 30s linear infinite;will-change:transform}
+  .marquee-track span{font-family:var(--sans);font-weight:600;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:#F4F1E8;margin:0 1rem}
+  .marquee-track span::before{content:"✦";color:var(--oil);margin-right:1rem}
   .marquee:hover .marquee-track{animation-play-state:paused}
   @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
   @media(prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+
+  /* rotating trust bar (top of page) */
+  .rotbar{background:var(--soil);color:#F4F1E8;display:flex;align-items:center;justify-content:center;gap:1.4rem;padding:.5rem 1rem}
+  .rotbar .rot-label{min-width:210px;text-align:center;font-family:var(--sans);font-weight:600;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;transition:opacity .35s ease}
+  .rotbar button{background:none;border:none;color:#F4F1E8;cursor:pointer;font-size:1.1rem;line-height:1;opacity:.65;padding:.1rem .4rem}
+  .rotbar button:hover{opacity:1}
   .hdr-icons{display:flex;align-items:center;gap:16px}
   .region{font-size:.82rem;border:1px solid var(--line);border-radius:999px;padding:.25rem .7rem;color:var(--ink)}
   .hdr-icons .icon{color:var(--ink);display:flex;align-items:center}
@@ -229,31 +259,49 @@
   .promo-fab span{display:block;font-size:1.15rem;letter-spacing:0}
   .promo-fab:hover{transform:scale(1.07);background:#BC8C46}
   .promo-fab:focus-visible{outline:3px solid var(--rosemary);outline-offset:2px}
+  .promo form{display:flex;flex-direction:column;gap:.6rem;margin-bottom:.2rem}
+  .promo input[type=email]{width:100%;font-family:var(--sans);font-size:1rem;padding:.72rem .85rem;border:1px solid var(--line);border-radius:var(--radius);background:#fff;color:var(--ink)}
+  .promo input[type=email]::placeholder{color:#9c9384}
+  .promo input[type=email]:focus{outline:none;border-color:var(--oil);box-shadow:0 0 0 3px rgba(168,124,58,.18)}
+  .promo form .btn{font-family:var(--sans)}
+  .promo .promo-err{color:#9a2b1f;font-size:.82rem;margin:.1rem 0 .2rem}
+  .promo .promo-fine{font-size:.72rem;color:var(--muted);margin:.7rem 0 0}
   @media (prefers-reduced-motion:reduce){.promo-overlay,.promo,.promo-fab{transition:none}}
 </style>
 </head>
 <body>
 
+<!-- rotating trust bar -->
+<div class="rotbar">
+  <button id="rotPrev" type="button" aria-label="Previous">‹</button>
+  <span class="rot-label" id="rotLabel">Plant-Based</span>
+  <button id="rotNext" type="button" aria-label="Next">›</button>
+</div>
+
 <header>
   <div class="wrap hdr">
     <a class="brand" href="/"><img src="images/logo.png" alt="Underoot" /></a>
+    <nav class="main-nav">
+      <a href="/">Home</a>
+      <a href="/product.html">Shop now</a>
+      <a href="/about.html">About us</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/track.html">Track your order</a>
+    </nav>
     <div class="hdr-icons">
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
       <span class="region">GB &#9662;</span>
-      <a class="icon" href="/contact" aria-label="Account"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.2-5.6 7-5.6s7 2 7 5.6"/></svg></a>
-      <a class="icon" href="/product" aria-label="Shop"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6.5 8h11l-1 11.5H7.5L6.5 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></a>
+      <a class="icon" href="/product.html" aria-label="Cart"><svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="20" r="1.3"/><circle cx="17.5" cy="20" r="1.3"/><path d="M3 4h2.2l2.1 11a1 1 0 0 0 1 .8h8a1 1 0 0 0 1-.78L20.5 8H6.3"/></svg></a>
     </div>
   </div>
 </header>
 
-<!-- HERO -->
+<!-- HERO (banner cover) -->
 <section class="hero">
-  <div class="wrap">
-    <span class="eyebrow">Scalp-first hair care · nurtured by nature</span>
-    <h1>Your hair was never the problem. Your <em>scalp</em> was.</h1>
-    <p class="sub">A lightweight rosemary scalp oil that feeds the one layer almost every other oil ignores — for the look of fuller, denser, healthier hair. Two minutes a day.</p>
-    <div class="cta-row"><a class="btn" href="/product">Shop now →</a></div>
+  <a href="/product.html" aria-label="Shop Underoot"><img src="images/hero.jpg" alt="Underoot — Refined Evolution. Nurtured by nature." class="hero-banner" /></a>
+  <div class="hero-cta">
+    <div class="cta-row"><a class="btn" href="/product.html">Shop now →</a></div>
     <p class="trust">Free tracked UK shipping &nbsp;·&nbsp; 30-day promise &nbsp;·&nbsp; COSMOS Organic</p>
-    <div class="hero-prod"><img src="images/lifestyle.jpg" alt="Underoot Rosemary Hair &amp; Scalp Strengthening Oil bottle" style="width:100%;border-radius:var(--radius);box-shadow:0 18px 46px rgba(42,33,18,.22)" /></div>
   </div>
 </section>
 
@@ -263,14 +311,14 @@
 </div></div>
 
 <!-- PRODUCT INTRO -->
-<section>
+<section style="padding-top:26px">
   <div class="wrap intro rv">
     <img src="images/oil-droplets.jpg" alt="Underoot Rosemary Hair &amp; Scalp Strengthening Oil with golden oil droplets" loading="lazy" />
     <div>
       <span class="eyebrow">The oil</span>
       <h2>Rosemary Hair &amp; Scalp Strengthening Oil</h2>
       <p class="lead" style="margin-top:1rem">A lightweight, fast-absorbing blend of nine plant oils led by rosemary — it nourishes the scalp and supports the look of fuller, healthier hair. Vegan, cruelty-free and COSMOS Organic certified.</p>
-      <div style="margin-top:1.4rem"><a class="btn" href="/product">View the product →</a></div>
+      <div style="margin-top:1.4rem"><a class="btn" href="/product.html">View the product →</a></div>
     </div>
   </div>
 </section>
@@ -354,7 +402,6 @@
   <div class="wrap center rv">
     <span class="eyebrow">The results</span>
     <img src="images/clinical.jpg" alt="Clinically tested — 90% noticed improved fullness, 87% denser-looking hair, 82% less dry scalp" style="width:100%;max-width:600px;border-radius:var(--radius);margin:1.4rem auto 0;display:block" />
-    <img src="images/results-6weeks.jpg" alt="Fuller, thicker, denser-looking hair in as little as 6 weeks" style="width:100%;max-width:600px;border-radius:var(--radius);margin:1.4rem auto 0;display:block" />
     <p class="lead" style="margin-top:1.2rem;font-size:.82rem">Results from independent studies over 12 weeks of daily use; individual results may vary. Underoot is a cosmetic oil that supports the look of healthier hair, not a treatment for hair loss.</p>
   </div>
 </section>
@@ -379,17 +426,20 @@
 
 <!-- OFFER -->
 <section class="offer">
-  <div class="wrap rv">
-    <span class="eyebrow on-dark">Start today</span>
-    <h2>Start your scalp reset.</h2>
-    <div class="price">£24</div>
-    <p style="color:var(--sage-2)">One bottle · around 3–4 weeks of daily use</p>
-    <ul>
-      <li>Free tracked UK shipping</li>
-      <li>Secure checkout</li>
-      <li>30-day promise — give it an honest go; if you're not happy, message us</li>
-    </ul>
-    <a class="btn" href="https://buy.stripe.com/8x26oHetd9Acgf82Y9eAg00">Buy now →</a>
+  <div class="wrap offer-grid rv">
+    <div class="offer-body">
+      <span class="eyebrow on-dark">Start today</span>
+      <h2>Start your scalp reset.</h2>
+      <div class="price">£24</div>
+      <p style="color:var(--sage-2)">One bottle · around 3–4 weeks of daily use</p>
+      <ul>
+        <li>Free tracked UK shipping</li>
+        <li>Secure checkout</li>
+        <li>30-day promise — give it an honest go; if you're not happy, message us</li>
+      </ul>
+      <a class="btn" href="/product.html">Buy now →</a>
+    </div>
+    <div class="offer-photo"><img src="images/model-blonde.jpg" alt="Woman holding the Underoot Rosemary Hair &amp; Scalp Strengthening Oil" loading="lazy" /></div>
   </div>
 </section>
 
@@ -414,14 +464,14 @@
   <div class="wrap rv">
     <h2>Stop treating the strand.<br>Start with the scalp.</h2>
     <p>Two minutes a day, on the one layer every other oil ignores.</p>
-    <a class="btn" href="https://buy.stripe.com/8x26oHetd9Acgf82Y9eAg00">Start your scalp reset →</a>
+    <a class="btn" href="/product.html">Start your scalp reset →</a>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
     <div class="foot">
-      <div class="mark" style="color:var(--paper)">Under<span style="color:var(--oil)">oot</span></div>
+      <a class="brand-foot" href="/"><img src="images/logo.png" alt="Underoot" /></a>
       <div style="display:flex;gap:18px;flex-wrap:wrap">
         <a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/refunds">Refunds</a><a href="/shipping">Shipping</a><a href="/contact">Contact</a>
       </div>
@@ -434,17 +484,55 @@
 <div class="promo-overlay" id="promoOverlay" role="dialog" aria-modal="true" aria-label="10% off launch offer">
   <div class="promo">
     <button class="x" id="promoClose" aria-label="Close offer">&times;</button>
-    <span class="eyebrow">Launch offer</span>
-    <h3>10% off your order</h3>
-    <p>Tap below and the code's applied automatically — or enter it at checkout.</p>
-    <button class="code" id="promoCode" title="Click to copy">WELCOME10</button>
-    <a class="btn" href="https://buy.stripe.com/8x26oHetd9Acgf82Y9eAg00?prefilled_promo_code=WELCOME10">Shop now &amp; save →</a>
-    <button class="skip" id="promoSkip">No thanks</button>
+    <!-- State 1: email gate -->
+    <div class="promo-gate" id="promoGate">
+      <span class="eyebrow">Launch offer</span>
+      <h3>Get 10% off your first order</h3>
+      <p>Drop your email and we'll send your code — plus first word on restocks &amp; new drops.</p>
+      <form id="promoForm" novalidate>
+        <input type="email" id="promoEmail" name="email" required autocomplete="email" placeholder="you@email.com" aria-label="Your email address" />
+        <button type="submit" class="btn" id="promoSubmit">Email me my code →</button>
+      </form>
+      <p class="promo-err" id="promoErr" hidden>Please enter a valid email address.</p>
+      <button class="skip" id="promoSkip">No thanks</button>
+      <p class="promo-fine">No spam — just the occasional update. Unsubscribe anytime.</p>
+    </div>
+
+    <!-- State 2: code revealed (after sign-up, or for returning subscribers) -->
+    <div class="promo-done" id="promoDone" hidden>
+      <span class="eyebrow">You're in</span>
+      <h3>Here's your 10% off</h3>
+      <p>Enter this at checkout — or tap below and it's applied for you.</p>
+      <button class="code" id="promoCode" title="Click to copy">WELCOME10</button>
+      <a class="btn" id="promoShop" href="/product.html">Shop now &amp; save →</a>
+    </div>
   </div>
 </div>
 <button class="promo-fab" id="promoFab" aria-label="Open 10% off offer"><span>10%</span>OFF</button>
 
 <script>
+  // rotating trust labels (top bar)
+  (function(){
+    var labels=["Plant-Based","Free UK Shipping","Expertly Created","Vegan Ingredients","COSMOS Organic Certified","Cruelty-Free","Science-Backed"];
+    var el=document.getElementById('rotLabel'); if(!el) return;
+    var i=0, t=null;
+    function show(n){ el.style.opacity=0; setTimeout(function(){ i=(n+labels.length)%labels.length; el.textContent=labels[i]; el.style.opacity=1; },180); }
+    function start(){ if(!matchMedia('(prefers-reduced-motion:reduce)').matches){ t=setInterval(function(){show(i+1);},3500); } }
+    function restart(){ if(t){clearInterval(t);} start(); }
+    var p=document.getElementById('rotPrev'), n=document.getElementById('rotNext');
+    p&&p.addEventListener('click',function(){show(i-1);restart();});
+    n&&n.addEventListener('click',function(){show(i+1);restart();});
+    start();
+  })();
+
+  // mobile nav toggle
+  (function(){
+    var t=document.getElementById('navToggle'), n=document.querySelector('.main-nav');
+    if(!t||!n) return;
+    t.addEventListener('click',function(){ var open=n.classList.toggle('open'); t.setAttribute('aria-expanded',open?'true':'false'); });
+    n.addEventListener('click',function(e){ if(e.target.tagName==='A'){ n.classList.remove('open'); t.setAttribute('aria-expanded','false'); } });
+  })();
+
   // reveal on scroll
   const rv=document.querySelectorAll('.rv');
   if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion:reduce)').matches){
@@ -456,21 +544,51 @@
   const ds=document.querySelectorAll('.faq details');
   ds.forEach(d=>d.addEventListener('toggle',()=>{ if(d.open) ds.forEach(o=>{if(o!==d)o.open=false}); }));
 
-  // launch discount popup + badge
+  // launch discount popup + email gate
   (function(){
     const ov=document.getElementById('promoOverlay'),
           fab=document.getElementById('promoFab'),
           x=document.getElementById('promoClose'),
           skip=document.getElementById('promoSkip'),
-          code=document.getElementById('promoCode');
+          code=document.getElementById('promoCode'),
+          gate=document.getElementById('promoGate'),
+          done=document.getElementById('promoDone'),
+          form=document.getElementById('promoForm'),
+          email=document.getElementById('promoEmail'),
+          err=document.getElementById('promoErr');
     if(!ov) return;
-    const open=()=>ov.classList.add('open'), close=()=>ov.classList.remove('open');
+
+    // ▼ MailerLite: paste your embedded-form action URL between the quotes (see setup steps). Leave "" until then.
+    const MAILERLITE_FORM_ACTION="";
+
+    const isSub=()=>{ try{ return localStorage.getItem('ul_sub')==='1'; }catch(e){ return false; } };
+    const markSub=()=>{ try{ localStorage.setItem('ul_sub','1'); }catch(e){} };
+    const showDone=()=>{ if(gate)gate.hidden=true; if(done)done.hidden=false; };
+    const showGate=()=>{ if(done)done.hidden=true; if(gate)gate.hidden=false; };
+    const open=()=>{ isSub()?showDone():showGate(); ov.classList.add('open'); };
+    const close=()=>ov.classList.remove('open');
+
+    if(isSub()) showDone();
     try{ if(!sessionStorage.getItem('promoSeen')){ setTimeout(open,1400); sessionStorage.setItem('promoSeen','1'); } }catch(e){ setTimeout(open,1400); }
+
     fab&&fab.addEventListener('click',open);
     x&&x.addEventListener('click',close);
     skip&&skip.addEventListener('click',close);
     ov.addEventListener('click',e=>{ if(e.target===ov) close(); });
     document.addEventListener('keydown',e=>{ if(e.key==='Escape') close(); });
+
+    form&&form.addEventListener('submit',function(e){
+      e.preventDefault();
+      const v=(email.value||'').trim();
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)){ if(err)err.hidden=false; email.focus(); return; }
+      if(err)err.hidden=true;
+      if(MAILERLITE_FORM_ACTION){
+        try{ const fd=new FormData(); fd.append('fields[email]',v);
+          fetch(MAILERLITE_FORM_ACTION,{method:'POST',body:fd,mode:'no-cors'}).catch(function(){}); }catch(e){}
+      }
+      markSub(); showDone();
+    });
+
     code&&code.addEventListener('click',()=>{
       try{ navigator.clipboard.writeText(code.textContent.trim()); }catch(e){}
       const o=code.textContent; code.textContent='Copied ✓'; setTimeout(()=>code.textContent=o,1200);
