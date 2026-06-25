@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rosemary Hair &amp; Scalp Strengthening Oil — Underoot</title>
+<meta name="description" content="Underoot Rosemary Hair & Scalp Strengthening Oil — a lightweight, COSMOS Organic certified scalp oil for the look of fuller, healthier hair. 30ml. Free tracked UK shipping." />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --primary:#0A473B; --secondary:#357A4E; --gold:#A87C3A; --gold-deep:#8A6526;
+    --bg:#F4F1E8; --ink:#241E16; --muted:#5F5848; --card:#FFFFFF; --line:rgba(42,33,18,.16); --radius:8px;
+    --serif:"Fraunces", Georgia, "Times New Roman", serif; --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:var(--gold-deep)}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(244,241,232,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .hdr{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .mark{font-family:var(--serif);font-weight:600;font-size:1.34rem;color:var(--ink);text-decoration:none}
+  .mark span{color:var(--gold-deep)}
+  nav{display:flex;gap:22px;font-size:.9rem}
+  nav a{color:var(--ink);text-decoration:none}
+  nav a:hover{color:var(--gold-deep)}
+  @media(max-width:760px){nav{display:none}}
+
+  .product{display:grid;grid-template-columns:1fr;gap:30px;padding:32px 0 50px}
+  @media(min-width:860px){.product{grid-template-columns:1.05fr 1fr;gap:46px;align-items:start}}
+  .gallery .main-img{width:100%;border-radius:14px;border:1px solid var(--line);background:#fff;aspect-ratio:1/1;object-fit:cover}
+  .thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}
+  .thumbs img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;border:1px solid var(--line);cursor:pointer;opacity:.65;transition:opacity .15s,border-color .15s}
+  .thumbs img:hover,.thumbs img.active{opacity:1;border-color:var(--gold)}
+  @media(min-width:860px){.gallery{position:sticky;top:84px}}
+
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,4vw,2.5rem);line-height:1.08}
+  .info{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:.85rem 1rem;font-size:.92rem;color:var(--muted);margin:1.1rem 0}
+  .lede{font-weight:600;font-size:1.06rem;margin:1.3rem 0 .2rem;color:var(--ink)}
+  .desc{color:var(--muted);font-size:.96rem;margin-top:.4rem}
+  .benefits{list-style:none;margin:1.3rem 0;display:grid;gap:.7rem}
+  .benefits li{display:flex;gap:.65rem;align-items:flex-start;font-size:.97rem}
+  .benefits li::before{content:"✓";color:#fff;background:var(--secondary);min-width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;margin-top:1px}
+  .offer-bar{text-align:center;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:.7rem 0;margin:1.4rem 0}
+  .price-row{display:flex;align-items:baseline;gap:.7rem;margin:.2rem 0}
+  .price{font-family:var(--serif);font-weight:600;font-size:2.1rem;color:var(--ink)}
+  .vol{font-size:.9rem;color:var(--muted)}
+  .code-note{font-size:.9rem;color:var(--secondary);font-weight:600;margin-top:.3rem}
+  .btn{display:block;width:100%;text-align:center;background:var(--primary);color:#fff;font-weight:600;font-size:1.05rem;padding:1.1rem;border-radius:var(--radius);text-decoration:none;margin-top:1rem;transition:background .2s}
+  .btn:hover{background:#0C5A49}
+  .pay{display:flex;flex-wrap:wrap;gap:.4rem .8rem;justify-content:center;align-items:center;margin-top:.9rem;font-size:.76rem;color:var(--muted)}
+  .pay span{border:1px solid var(--line);border-radius:5px;padding:.12rem .4rem;background:#fff}
+  .ship{text-align:center;font-size:.9rem;color:var(--muted);margin-top:.85rem}
+
+  .acc{margin-top:1.7rem}
+  .acc details{border-top:1px solid var(--line)}
+  .acc details:last-child{border-bottom:1px solid var(--line)}
+  .acc summary{list-style:none;cursor:pointer;padding:1.05rem 0;font-family:var(--serif);font-weight:600;font-size:1.05rem;display:flex;justify-content:space-between;align-items:center}
+  .acc summary::-webkit-details-marker{display:none}
+  .acc summary::after{content:"+";color:var(--gold-deep);font-size:1.3rem;line-height:1}
+  .acc details[open] summary::after{content:"–"}
+  .acc .body{padding:0 0 1.1rem;color:var(--muted);font-size:.95rem}
+  .acc .body ul{padding-left:1.15rem;margin-top:.4rem;display:grid;gap:.35rem}
+  .inci{font-size:.82rem;line-height:1.55}
+
+  .results{padding:6px 0 44px;text-align:center}
+  .results .eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep)}
+  .results img{width:100%;max-width:620px;border-radius:var(--radius);margin:1.2rem auto 0;border:1px solid var(--line)}
+
+  footer{background:#0A2A20;color:#C4D2B8;padding:30px 0;font-size:.82rem;margin-top:10px}
+  .foot{display:flex;flex-wrap:wrap;gap:10px 20px;justify-content:space-between;align-items:center}
+  .foot a{color:#C4D2B8;text-decoration:none}
+  .foot a:hover{color:var(--gold)}
+  .disc{color:#7E8A77;font-size:.72rem;margin-top:14px;max-width:46rem}
+
+  /* discount popup + badge */
+  .promo-overlay{position:fixed;inset:0;background:rgba(20,16,10,.55);display:flex;align-items:center;justify-content:center;z-index:200;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;padding:20px}
+  .promo-overlay.open{opacity:1;visibility:visible}
+  .promo{background:var(--bg);border:1px solid var(--line);border-radius:16px;max-width:380px;width:100%;padding:2.1rem 1.8rem 1.6rem;text-align:center;position:relative;box-shadow:0 24px 60px rgba(20,16,10,.32)}
+  .promo .x{position:absolute;top:.6rem;right:.85rem;background:none;border:none;font-size:1.6rem;color:var(--muted);cursor:pointer}
+  .promo .eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep)}
+  .promo h3{font-family:var(--serif);font-weight:600;font-size:1.6rem;margin:.4rem 0 .5rem}
+  .promo p{font-size:.92rem;color:var(--muted);margin-bottom:1rem}
+  .promo .code{display:inline-block;font-weight:700;letter-spacing:.18em;font-size:1.05rem;color:var(--gold-deep);background:#fff;border:1px dashed var(--gold);border-radius:8px;padding:.5rem 1rem;margin-bottom:1.1rem;cursor:pointer}
+  .promo .skip{display:block;width:100%;margin-top:.7rem;background:none;border:none;color:var(--muted);font-size:.8rem;text-decoration:underline;cursor:pointer}
+  .promo-fab{position:fixed;bottom:18px;left:18px;z-index:150;width:72px;height:72px;border-radius:50%;background:var(--gold);color:#1a1405;border:none;cursor:pointer;font-weight:700;font-size:.7rem;line-height:1.05;box-shadow:0 8px 22px rgba(20,16,10,.28)}
+  .promo-fab span{display:block;font-size:1.15rem}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hdr">
+    <a class="mark" href="/">Under<span>oot</span></a>
+    <nav><a href="/">Home</a><a href="/product">Shop</a><a href="/contact">Contact</a><a href="/shipping">Shipping</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="product">
+    <!-- GALLERY -->
+    <div class="gallery">
+      <img id="mainImg" class="main-img" src="images/bottle.jpg" alt="Underoot Rosemary Hair & Scalp Strengthening Oil bottle" />
+      <div class="thumbs" id="thumbs">
+        <img src="images/bottle.jpg" alt="Bottle" class="active" />
+        <img src="images/lifestyle.jpg" alt="Bottle on driftwood" />
+        <img src="images/oil-droplets.jpg" alt="Oil texture" />
+        <img src="images/model-holding.jpg" alt="Holding the oil" />
+        <img src="images/application.jpg" alt="Applying to the scalp" />
+        <img src="images/scalp-care.jpg" alt="Healthy-looking hair" />
+        <img src="images/box-front.jpg" alt="Box and bottle" />
+        <img src="images/how-to.jpg" alt="How to use" />
+        <img src="images/clinical.jpg" alt="Tested results" />
+        <img src="images/results-6weeks.jpg" alt="Results over 6 weeks" />
+      </div>
+    </div>
+
+    <!-- BUY BOX -->
+    <div class="buybox">
+      <h1>Rosemary Hair &amp; Scalp Strengthening Oil</h1>
+      <div class="info">A clean, plant-based scalp oil — rosemary, peppermint and seven more botanical oils — to nourish the scalp and support the look of fuller, healthier hair.</div>
+
+      <p class="lede">Lightweight, plant-based, scalp-first care</p>
+      <ul class="benefits">
+        <li>Lightweight &amp; fast-absorbing — feels like a serum, never greasy</li>
+        <li>Rosemary, castor &amp; nettle botanicals to nourish the scalp</li>
+        <li>Supports the scalp — where healthy-looking hair starts</li>
+        <li>Vegan, cruelty-free &amp; <strong>COSMOS Organic certified</strong> · calming vanilla-sandalwood scent</li>
+        <li>For all hair types · gentle enough for daily use</li>
+      </ul>
+
+      <div class="offer-bar">Launch offer — 10% off with code WELCOME10</div>
+      <div class="price-row"><span class="price">£24</span><span class="vol">30 ml / 1.0 fl oz</span></div>
+      <div class="code-note">Pay £21.60 — code WELCOME10 applied at checkout</div>
+      <a class="btn" href="https://buy.stripe.com/8x26oHetd9Acgf82Y9eAg00?prefilled_promo_code=WELCOME10">Buy now →</a>
+      <div class="pay"><span>VISA</span><span>Mastercard</span><span>Amex</span><span>Apple&nbsp;Pay</span><span>Google&nbsp;Pay</span></div>
+      <p class="ship">Free tracked UK shipping · made to order · secure Stripe checkout</p>
+
+      <div class="acc">
+        <details open>
+          <summary>Description</summary>
+          <div class="body">A nutrient-rich oil serum infused with rosemary and peppermint to nourish the scalp, improve hair resilience and restore shine to dry or brittle hair. A lightweight blend of nine plant oils led by rosemary — it sinks in like a serum, never greasy. A cosmetic hair-enhancing oil; not a medicine or hair-loss treatment.</div>
+        </details>
+        <details>
+          <summary>How to use</summary>
+          <div class="body"><ul>
+            <li><strong>1.</strong> Use once daily, morning or night. Shake well before use.</li>
+            <li><strong>2.</strong> Use the dropper to apply directly to a dry or towel-dried scalp, wherever you'd like.</li>
+            <li><strong>3.</strong> Massage into the scalp and let it soak in — a slight tingling is normal. Leave in, or rinse after an hour.</li>
+          </ul></div>
+        </details>
+        <details>
+          <summary>Shipping &amp; delivery</summary>
+          <div class="body">Free tracked UK shipping on every order. Made to order and dispatched by our fulfilment partner. Full delivery times and our returns policy are on the <a href="/shipping">Shipping</a> and <a href="/refunds">Refunds</a> pages.</div>
+        </details>
+        <details>
+          <summary>Ingredients (full INCI)</summary>
+          <div class="body inci">Helianthus Annuus (Sunflower) Seed Oil*, Decyl Cocoate, Ricinus Communis (Castor) Seed Oil*, Prunus Amygdalus Dulcis (Sweet Almond) Oil*, Argania Spinosa (Argan) Kernel Oil*, Parfum/Fragrance, Cannabis Sativa (Hemp) Seed Oil*, Olea Europaea (Olive) Fruit Oil*, Persea Gratissima (Avocado) Oil*, Mentha Piperita (Peppermint) Oil*, Rosmarinus Officinalis (Rosemary) Leaf Oil*, Urtica Dioica (Nettle) Leaf Extract*, Menthol**, Limonene**, Camphor**, Pinene**, Citrus Aurantium Bergamia (Bergamot) Peel Oil, Linalool**, Beta-Caryophyllene**, Vanillin, Linalyl Acetate**, Eugenia Caryophyllus Oil, Eugenol**, Citrus Aurantium Peel Oil, Citrus Limon Peel Oil, Pogostemon Cablin Oil, Santalol**, Coumarin**, Carvone**.<br><br>*Ingredients from organic farming · **From natural essential oils. 100% natural origin of total / 69% organic of total. COSMOS ORGANIC certified by ECOCERT Greenlife.</div>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULTS (Selfnamed-substantiated) -->
+  <div class="results rv">
+    <span class="eyebrow">The results</span>
+    <img src="images/clinical.jpg" alt="Tested — 90% noticed improved fullness, 87% denser-looking hair, 82% less dry scalp" loading="lazy" />
+    <img src="images/results-6weeks.jpg" alt="Fuller, thicker, denser-looking hair in as little as 6 weeks" loading="lazy" />
+    <p class="ship" style="margin-top:1rem">Results from independent studies over 12 weeks of daily use; individual results may vary.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="mark" style="color:#F4F1E8" href="/">Under<span style="color:var(--gold)">oot</span></a>
+      <div style="display:flex;gap:18px;flex-wrap:wrap"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/refunds">Refunds</a><a href="/shipping">Shipping</a><a href="/contact">Contact</a></div>
+    </div>
+    <p class="disc">Underoot products are cosmetics. They are not intended to diagnose, treat, cure, or prevent any condition.</p>
+  </div>
+</footer>
+
+<!-- discount popup + badge -->
+<div class="promo-overlay" id="promoOverlay" role="dialog" aria-modal="true" aria-label="10% off launch offer">
+  <div class="promo">
+    <button class="x" id="promoClose" aria-label="Close offer">&times;</button>
+    <span class="eyebrow">Launch offer</span>
+    <h3>10% off your order</h3>
+    <p>Tap below and the code's applied automatically — or enter it at checkout.</p>
+    <button class="code" id="promoCode" title="Click to copy">WELCOME10</button>
+    <a class="btn" href="https://buy.stripe.com/8x26oHetd9Acgf82Y9eAg00?prefilled_promo_code=WELCOME10">Shop now &amp; save →</a>
+    <button class="skip" id="promoSkip">No thanks</button>
+  </div>
+</div>
+<button class="promo-fab" id="promoFab" aria-label="Open 10% off offer"><span>10%</span>OFF</button>
+
+<script>
+  // gallery thumbnail switch
+  (function(){
+    var main=document.getElementById('mainImg'), thumbs=document.getElementById('thumbs');
+    if(!thumbs) return;
+    thumbs.addEventListener('click',function(e){
+      var t=e.target.closest('img'); if(!t) return;
+      main.src=t.src; main.alt=t.alt;
+      thumbs.querySelectorAll('img').forEach(function(i){i.classList.remove('active');});
+      t.classList.add('active');
+    });
+  })();
+  // discount popup + badge
+  (function(){
+    var ov=document.getElementById('promoOverlay'),fab=document.getElementById('promoFab'),
+        x=document.getElementById('promoClose'),skip=document.getElementById('promoSkip'),code=document.getElementById('promoCode');
+    if(!ov) return;
+    var open=function(){ov.classList.add('open');},close=function(){ov.classList.remove('open');};
+    try{ if(!sessionStorage.getItem('promoSeen')){ setTimeout(open,1600); sessionStorage.setItem('promoSeen','1'); } }catch(e){ setTimeout(open,1600); }
+    fab&&fab.addEventListener('click',open);
+    x&&x.addEventListener('click',close);
+    skip&&skip.addEventListener('click',close);
+    ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+    code&&code.addEventListener('click',function(){ try{navigator.clipboard.writeText(code.textContent.trim());}catch(e){} var o=code.textContent; code.textContent='Copied ✓'; setTimeout(function(){code.textContent=o;},1200); });
+  })();
+</script>
+</body>
+</html>

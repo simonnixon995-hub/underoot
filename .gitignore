@@ -1,0 +1,18 @@
+# ── Secrets: never commit ─────────────────────────────────────
+# The Stripe secret key (and any other credential) must live ONLY
+# in the local MCP/env config — never in this repo.
+.env
+.env.*
+*.env
+.dev.vars          # Cloudflare Pages / Wrangler local secrets
+.mcp.json          # project-level MCP config may hold the Stripe secret key
+mcp.json
+secrets.json
+*.pem
+*.key
+
+# ── Tooling / OS cruft ────────────────────────────────────────
+node_modules/
+.vscode/
+.DS_Store
+Thumbs.db
