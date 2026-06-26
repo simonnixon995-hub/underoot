@@ -16,3 +16,6 @@ node_modules/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# ── Internal notes: keep local, never publish ────────────────
+reference/

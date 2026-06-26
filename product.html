@@ -259,29 +259,6 @@
 </div>
 <button class="promo-fab" id="promoFab" aria-label="Open 10% off offer"><span>10%</span>OFF</button>
 
-<!-- cart drawer -->
-<div class="cart-overlay" id="cartOverlay">
-  <aside class="cart" role="dialog" aria-modal="true" aria-label="Your cart">
-    <div class="cart-head"><h3>Your cart</h3><button class="cart-x" id="cartClose" aria-label="Close cart">&times;</button></div>
-    <div class="cart-body">
-      <div class="cart-item">
-        <img class="cart-thumb" src="images/bottle.jpg" alt="" />
-        <div class="cart-info">
-          <strong>Rosemary Hair &amp; Scalp Strengthening Oil</strong>
-          <span class="cart-vol">30 ml / 1.0 fl oz</span>
-        </div>
-        <span class="cart-line">£24.00</span>
-      </div>
-    </div>
-    <div class="cart-foot">
-      <div class="cart-row"><span>Subtotal</span><span id="cartSubtotal">£24.00</span></div>
-      <p class="cart-fine" id="cartDiscNote" hidden>WELCOME10 (−10%) applied at checkout</p>
-      <a class="btn" id="cartCheckout" href="https://buy.stripe.com/8x26oHetd9Acgf82Y9eAg00">Checkout →</a>
-      <p class="cart-fine">Shipping calculated at checkout · secure Stripe checkout</p>
-    </div>
-  </aside>
-</div>
-
 <script>
   // gallery thumbnail switch
   (function(){
@@ -345,31 +322,6 @@
     });
 
     code&&code.addEventListener('click',function(){ try{navigator.clipboard.writeText(code.textContent.trim());}catch(e){} var o=code.textContent; code.textContent='Copied ✓'; setTimeout(function(){code.textContent=o;},1200); });
-  })();
-
-  // cart drawer + subscriber discount
-  (function(){
-    var STRIPE="https://buy.stripe.com/8x26oHetd9Acgf82Y9eAg00";
-    function isSub(){ try{ return localStorage.getItem('ul_sub')==='1'; }catch(e){ return false; } }
-    var add=document.getElementById('addToCart'),
-        ov=document.getElementById('cartOverlay'),
-        closeBtn=document.getElementById('cartClose'),
-        checkout=document.getElementById('cartCheckout'),
-        buy=document.getElementById('buyNow'),
-        discNote=document.getElementById('cartDiscNote');
-    // subscribers (entered their email) get the code auto-applied at checkout
-    if(isSub()){
-      var url=STRIPE+"?prefilled_promo_code=WELCOME10";
-      if(buy) buy.href=url;
-      if(checkout) checkout.href=url;
-      if(discNote) discNote.hidden=false;
-    }
-    function openCart(){ if(ov) ov.classList.add('open'); }
-    function closeCart(){ if(ov) ov.classList.remove('open'); }
-    add&&add.addEventListener('click',openCart);
-    closeBtn&&closeBtn.addEventListener('click',closeCart);
-    ov&&ov.addEventListener('click',function(e){ if(e.target===ov) closeCart(); });
-    document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeCart(); });
   })();
 
   // Shopify Buy Button — checkout runs through Shopify → Selfnamed auto-fulfils
