@@ -113,6 +113,8 @@
   .btn-cart{display:block;width:100%;text-align:center;background:transparent;color:var(--ink);border:1.5px solid var(--ink);margin-bottom:.6rem}
   .btn-cart:hover{background:var(--ink);color:#fff}
   .btn-buy{display:block;width:100%;text-align:center}
+  #shopify-buybutton{margin:1.1rem 0 .5rem;min-height:50px}
+  #shopify-buybutton .shopify-buy__btn{width:100%}
   .cart-overlay{position:fixed;inset:0;background:rgba(20,16,10,.5);z-index:300;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
   .cart-overlay.open{opacity:1;visibility:visible}
   .cart{position:absolute;top:0;right:0;height:100%;width:min(390px,92vw);background:var(--bg);display:flex;flex-direction:column;box-shadow:-12px 0 40px rgba(20,16,10,.28);transform:translateX(100%);transition:transform .28s ease}
@@ -179,10 +181,9 @@
 
       <button type="button" class="offer-bar" id="offerBar">Launch offer — get 10% off your first order →</button>
       <div class="price-row"><span class="price">£24</span><span class="vol">30 ml / 1.0 fl oz</span></div>
-      <button type="button" class="btn btn-cart" id="addToCart">Add to cart</button>
-      <a class="btn btn-buy" id="buyNow" href="https://buy.stripe.com/8x26oHetd9Acgf82Y9eAg00">Buy it now →</a>
+      <div id="shopify-buybutton" class="buybutton-mount"></div>
       <div class="pay"><span>VISA</span><span>Mastercard</span><span>Amex</span><span>Apple&nbsp;Pay</span><span>Google&nbsp;Pay</span></div>
-      <p class="ship">Free tracked UK shipping · made to order · secure Stripe checkout</p>
+      <p class="ship">Free tracked UK shipping · made to order · secure Shopify checkout</p>
 
       <div class="acc">
         <details open>
@@ -252,7 +253,7 @@
       <h3>Here's your 10% off</h3>
       <p>Enter this at checkout — or tap below and it's applied for you.</p>
       <button class="code" id="promoCode" title="Click to copy">WELCOME10</button>
-      <a class="btn" id="promoShop" href="https://buy.stripe.com/8x26oHetd9Acgf82Y9eAg00?prefilled_promo_code=WELCOME10">Shop now &amp; save →</a>
+      <a class="btn" id="promoShop" href="#shopify-buybutton">Shop now &amp; save →</a>
     </div>
   </div>
 </div>
@@ -369,6 +370,46 @@
     closeBtn&&closeBtn.addEventListener('click',closeCart);
     ov&&ov.addEventListener('click',function(e){ if(e.target===ov) closeCart(); });
     document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeCart(); });
+  })();
+
+  // Shopify Buy Button — checkout runs through Shopify → Selfnamed auto-fulfils
+  (function () {
+    var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+    if (window.ShopifyBuy) { if (window.ShopifyBuy.UI) { init(); } else { load(); } } else { load(); }
+    function load() {
+      var s = document.createElement('script'); s.async = true; s.src = scriptURL;
+      (document.head || document.body).appendChild(s); s.onload = init;
+    }
+    function init() {
+      var client = ShopifyBuy.buildClient({
+        domain: 'if69ip-s9.myshopify.com',
+        storefrontAccessToken: 'fc99e18e32434ccc6b0b9b6fbb11636b',
+      });
+      ShopifyBuy.UI.onReady(client).then(function (ui) {
+        ui.createComponent('product', {
+          id: '15629561397574',
+          node: document.getElementById('shopify-buybutton'),
+          moneyFormat: '£{{amount}}',
+          options: {
+            product: {
+              contents: { img: false, title: false, price: false, options: false, button: true },
+              buttonDestination: 'checkout',
+              text: { button: 'Buy now →' },
+              styles: { button: {
+                'font-family': 'Helvetica Neue, Helvetica, Arial, sans-serif',
+                'font-weight': '600', 'font-size': '16px',
+                'padding-top': '16px', 'padding-bottom': '16px',
+                'color': '#1a1405', 'background-color': '#A87C3A',
+                ':hover': { 'background-color': '#8A6526' },
+                ':focus': { 'background-color': '#8A6526' },
+                'border-radius': '8px'
+              } }
+            },
+            cart: { text: { total: 'Subtotal', button: 'Checkout' } }
+          }
+        });
+      });
+    }
   })();
 </script>
 </body>
