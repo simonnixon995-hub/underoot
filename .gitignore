@@ -19,3 +19,9 @@ Thumbs.db
 
 # ── Internal notes: keep local, never publish ────────────────
 reference/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
